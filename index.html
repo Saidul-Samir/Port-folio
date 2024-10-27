@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 5px solid rgb(85, 85, 85);
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav h2 {
+            font-size: 5vh;
+            color: rgb(0, 255, 221);
+        }
+
+        .nav .menu-icon {
+            display: none;
+            font-size: 3vh;
+            cursor: pointer;
+            color: rgb(0, 255, 221);
+        }
+
+        .nav .section {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav .section a {
+            text-decoration: none;
+            color: rgb(0, 255, 221);
+            font-size: 4vh;
+            margin-left: 25px;
+        }
+
+        /* Hide the menu initially on smaller screens */
+        .nav .section {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Content Section */
+        .section-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 10%;
+            margin-top: 75px; /* Ensure content is not hidden behind the nav */
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        .text-content h1 {
+            font-size: 5vh;
+            font-weight: 800;
+            /*margin-bottom: 20px;*/
+        }
+
+        .text-content span {
+            color: rgb(0, 255, 221);
+        }
+
+        .text-content p {
+            font-size: 3vh;
+            line-height: 1.5;
+            /*margin-bottom: 30px;*/
+        }
+
+        .text-content button {
+            padding: 15px 25px;
+            background-color: rgb(0, 255, 221);
+            border: none;
+            border-radius: 5px;
+            font-size: 2.5vh;
+            cursor: pointer;
+        }
+
+        .section-content img {
+            width: 25%; /* Smaller image size */
+            height: auto;
+            margin-left: 5%;
+            border-radius: 5%;
+            border: 3px solid black;
+        }
+
+        /* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 125px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav .menu-icon {
+                display: block;
+            }
+
+            .nav .section {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px;
+                border-bottom: 5px solid rgb(85, 85, 85);
+                z-index: 999;
+            }
+
+            .nav .section.active {
+                display: flex;
+            }
+
+            .nav .section a {
+                padding: 10px 20px;
+                text-align: left;
+                font-size: 2.5vh;
+            }
+
+            .section-content {
+                flex-direction: column;
+                padding: 5px 5%;
+            }
+
+            .text-content {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .section-content img {
+                width: 75%;
+                height: auto;
+                margin-top: 15px;
+            }
+
+            footer{
+                margin-top: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>Port Folio</h2>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="section">
+            <a href="index.html">Home</a>
+            <a href="achivements.html">Achivements</a>
+            <a href="contact.html">Contact Info</a>
+
+            
+        </div>
+    </div>
+    <div class="section-content">
+        <div class="text-content">
+            <h1>I am <span>Saidul Islam</span></h1>
+            <p>A 15 Year's old Student, leads an E-Commarce store and also a web developer. Stay in Bangladesh. Studing at a high school. 
+                Trying to take his E-Commarce store[siteName] more heigher.
+            </p>
+        </div>
+        <img src="att.ZoEuuMx_HnCorKZWM45GbIlBFb9_H1l0CSnYmH6Gh1k.jpg" alt="Store Image">
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Saidul's Port Folio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav .section');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 5px solid rgb(85, 85, 85);
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav h2 {
+            font-size: 5vh;
+            color: rgb(0, 255, 221);
+        }
+
+        .nav .menu-icon {
+            display: none;
+            font-size: 3vh;
+            cursor: pointer;
+            color: rgb(0, 255, 221);
+        }
+
+        .nav .section {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav .section a {
+            text-decoration: none;
+            color: rgb(0, 255, 221);
+            font-size: 4vh;
+            margin-left: 25px;
+        }
+
+        /* Hide the menu initially on smaller screens */
+        .nav .section {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Main content */
+
+        /* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 100px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.body{
+            margin-top: 75px;
+        }
+
+        .con{
+            font-size: 3.3vh;
+            margin: 3vw;
+            color: #64aa52;
+        }
+
+        .conend{
+            font-size: 3vh;
+            margin: 3vw;
+        }
+
+        .lin{
+            margin-top: 5vh;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav .menu-icon {
+                display: block;
+            }
+
+            .nav .section {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px;
+                border-bottom: 5px solid rgb(85, 85, 85);
+                z-index: 999;
+            }
+
+            .nav .section.active {
+                display: flex;
+            }
+
+            .nav .section a {
+                padding: 10px 20px;
+                text-align: left;
+                font-size: 2.5vh;
+            }
+ 
+            .body{
+            margin-top: 75px;
+        }
+
+        .con{
+            font-size: 3.3vh;
+            margin: 4vw;
+            color: #64aa52;
+        }
+
+        .conend{
+            font-size: 3vh;
+            margin: 4vw;
+        }
+
+        .lin{
+            margin-top: 7vh;
+        }
+
+        footer{
+            margin-top: 137px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>Port Folio</h2>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="section">
+            <a href="index.html">Home</a>
+            <a href="achivements.html">Acivements</a>
+            <a href="contact.html">Contact Info </a>
+
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="main">
+            <div class="lin">
+                <div class="con">Linkedin:-</div>
+                <div class="conend">abcd.com</div>
+            </div>
+
+            <div class="lin">
+                <div class="con">Facebook:-</div>
+                <div class="conend">abcd.com</div>
+            </div>
+
+            <div class="lin">
+                <div class="con">G-Mail:- </div>
+                <div class="conend">srabonislam.saidul@gmail.com</div>
+            </div>
+            
+            <div class="lin">
+                <div class="con">Number:-</div>
+                <div class="conend">01982978201</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Saidul's Port Folio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav .section');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
